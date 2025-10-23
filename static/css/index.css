@@ -7,6 +7,25 @@ body {
     color: #000;
 }
 
+.icon-wrapper {
+  display: inline-block;
+  background-color: white;      /* default background */
+  /* padding: 4px; */
+  border-radius: 3px;
+  transition: background-color 0.1s ease;  /* smooth transition */
+}
+.icon-wrapper img {
+  height: 22px;   /* adjust as needed */
+  width: auto;
+  display: block;
+  /* transform: scale(1.2); */
+}
+/* ✅ Change background color when hovering over the link or icon */
+.link-block a:hover .icon-wrapper,
+.icon-wrapper:hover {
+  background-color: rgb(243, 189, 11); /* yellow on hover */
+}
+
 .link-block .icon img,
 .link-block .icon i {
   /*height: 24px;       /* make all icons the same height */
