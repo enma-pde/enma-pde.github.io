@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="ENMA: Tokenwise Autoregression for Generative Neural PDE Operators.">
+  <meta property="og:title" content="tokenwise generative modeling physics encoding"/>
+  <meta property="og:description" content="tokenwise generative modeling physics encoding"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="../images/enma/enma-general.pdf" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="tokenwise generative modeling physics encoding">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>ENMA: Tokenwise Autoregression for Generative Neural PDE Operators.</title>
+  
+  
+  <link rel="icon" type="image/x-icon" href="static/images/enma/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="video-wrapper header">
+
+    <div class="bg-overlay"></div>
+
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <!-- Title -->
+              <h1 class="xtitle is-1 publication-title">
+                ENMA: Tokenwise Autoregression for Generative Neural PDE Operators.
+              </h1>
+          
+              <!-- Authors: centered -->
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><a href="https://itsakk.github.io" target="_blank">Armand Kassaï Koupaï<sup>1*</sup></a></span>
+                <span class="author-block"><a href="https://2ailesb.github.io/index.html" target="_blank">Lise Le Boudec<sup>1*</sup></a></span>
+                <span class="author-block">Louis Serrano <sup>1</sup></span>
+                <span class="author-block"><a href="https://pages.isir.upmc.fr/gallinari/">Patrick Gallinari <sup>1,2</sup></a></span>
+              </div>
+              <!-- Institutions: left-aligned -->
+              <div class="is-size-5 publication-institutions">
+                <span class="institution-block"><sup>1</sup> Sorbonne Université, CNRS, ISIR, F-75005 Paris, France</span><br>
+                <span class="institution-block"><sup>2</sup> Criteo AI Lab, Paris, France</span><br>
+                <span class="institution-block"><sup>*</sup> Equal contribution. </span>
+              </div>
+            <div class="column has-text-centered">
+                <div class="publication-links">
+                        <!-- Arxiv PDF link -->
+                    <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2506.06158" target="_blank"
+                        class="external-link ">
+                        <span class="icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                        </a>
+                    </span>
+
+                <!-- Github link -->
+                <!-- <span class="link-block">
+                    <a href="https://github.com/2ailesB/neural-parametric-solver" target="_blank"
+                    class="external-link ">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                    </a>
+                </span> -->
+
+                <!-- HF link
+                <span class="link-block">
+                    <a href="https://huggingface.co/datasets/2ailesB/neural-parametric-solver-datasets" target="_blank"
+                    class="external-link ">
+                    <span class="icon">
+                        <i> <img src="images/enma/hfbw.svg" alt="Hugging Face"/></i>
+                    </span>
+                    <span>Datasets</span>
+                    </a>
+                </span> -->
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                    <a href="https://arxiv.org/abs/2506.06158" target="_blank"
+                    class="external-link ">
+                    <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                    </a>
+                </span>
+            </div>
+          </div>
+          <div class="publication-conf">
+            <h2>
+                SPOTLIGHT poster at <a href="https://neurips.cc/virtual/2025/poster/120060" >NeurIPS 2025</a>. 
+            </h2>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Solving time-dependent parametric partial differential equations (PDEs) remains a fundamental challenge for neural solvers, particularly when generalizing across a wide range of physical parameters and dynamics. When data is uncertain or incomplete—as is often the case—a natural approach is to turn to generative models.We introduce ENMA, a generative neural operator designed to model spatio-temporal dynamics arising from physical phenomena. ENMA predicts future dynamics in a compressed latent space using a generative masked autoregressive transformer trained with flow matching loss, enabling tokenwise generation. Irregularly sampled spatial observations are encoded into uniform latent representations via attention mechanisms and further compressed through a spatio-temporal convolutional encoder. This allows ENMA to perform in-context learning at inference time by conditioning on either past states of the target trajectory or auxiliary context trajectories with similar dynamics. The result is a robust and adaptable framework that generalizes to new PDE regimes and supports one-shot surrogate modeling of time-dependent parametric PDEs.          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Training a neural Solver -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <div class="column is-centered">
+        <div class="column is-10 content-column">
+          <h2 class="title">The ENMA framework</h2>
+          
+          <p class="has-text-justified"> 
+            We introduce ENMA (presented in the Figure below), a continuous autoregressive
+            neural operator for modeling time-dependent parametric PDEs, where parameters such as initial
+            conditions, coefficients, and forcing terms may vary across instances. ENMA operates entirely
+            in a continuous latent space and advances both the encoder-decoder pipeline and the generative
+            modeling component crucial to neural PDE solvers. The encoder employs attention mechanisms to
+            process irregular spatio-temporal inputs (i.e., unordered point sets) and maps them onto a structured,
+            grid-aligned latent space. A causal spatio-temporal convolutional encoder then
+            compresses these observations into compact latent tokens spanning multiple states. 
+            Generation proceeds in two stages. A causal transformer first predicts future latent states autoregressively. 
+            Then, a masked spatial transformer decodes each state at the token level using Flow Matching to model 
+            per-token conditional distributions in continuous space—providing a more efficient alternative to full-frame diffusion. 
+            Finally, the decoder reconstructs the full physical trajectory from the generated latents. 
+          </p>
+
+          <img src="images/enma/enma-general.pdf" width="100%" alt="diagram of the neural solver">
+
+          <h3><strong>Our contributions are as follows:</strong></h3>
+
+          <ul class="contrib-list">
+            <li>We introduce ENMA, the <strong>first neural operator to perform autoregressive generation over continuous latent tokens for physical systems, enabling accurate and scalable modeling of parametric PDEs while avoiding the limitations of discrete quantization.</strong></li>
+            <li>Using a masked spatial transformer trained with a Flow Matching objective to model per-token conditional distributions, <strong> offers a principled and efficient alternative to full-frame diffusion models for generation.</strong></li>
+            <li><strong> ENMA supports probabilistic forecasting via tokenwise sampling and adapts to novel PDE regimes at inference time through temporal or trajectory-based conditioning—without retraining.</strong></li>
+            <li>To handle irregularly sampled inputs and support multi-state tokenization, <strong> ENMA leverages attention-based encoding combined with causal temporal convolutions.</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End Training -->
+
+<!-- Results -->
+<section class="hero is-small is-light">
+    <div class="hero-body">
+        <div class="container">
+        <div class="column is-centered">
+        <div class="column is-10 content-column">
+          <h2 class="title">Comparison with baselines</h2>
+          <p class="has-text-justified">
+            We evaluate the proposed method on several baselines and datasets to illustrate the benefits of our method. 
+            First, we show the results of the tokenwize generation process, and then, we show a comparison of our auto-encoding strategy with baselines. 
+          </p>
+          <div class="column has-text-centered">
+            <img  src="images/enma/results-process.png" style="max-width:900px; width:100%;" height="550" alt="Quantitative comparison of neural solver with baselines">
+            <img  src="images/enma/results-ae.png" style="max-width:900px; width:100%;" height="550" alt="Quantitative comparison of neural solver with baselines">
+          </div>
+        </div>
+        <div class="column is-10 content-column">
+          <h2 class="title">Generative Capabilities</h2>
+          <p class="has-text-justified">
+            ENMA functions as a generative neural operator capable of producing stochastic and physically
+            consistent trajectories. We highlight two core experiments that demonstrate its generative ability: 
+            an uncertainty quantification s
+            ENMA performs uncertainty estimation by sampling multiple trajectories from its continuous latent space through stochastic flow matching. 
+          </p>
+          <div class="column has-text-centered">
+            <img  src="images/enma/uncertainty.png" style="max-width:400px; width:100%;" height="550" alt="Quantitative comparison of neural solver with baselines">
+          </div>
+          <p class="has-text-justified">
+          We further assess ENMA’s ability to generate full trajectories without conditioning on the initial state or PDE parameters. Given only a context trajectory, ENMA infers the latent physics and synthesizes coherent spatio-temporal fields
+          </p>
+          <div class="column has-text-centered">
+            <img  src="images/enma/datagen.png" style="max-width:900px; width:100%;" height="550" alt="Quantitative comparison of neural solver with baselines">
+          </div>
+        </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+    <div class="column is-centered">
+        <h2 class="title">Visualizations</h2>
+    <div id="results-carousel" class="carousel results-carousel">
+      <div class="item">
+        <!-- Your image here -->
+        <img src="images/enma/combined_vis_enma_gt_err_1.png" alt="Qualitative results of reconstruction using neural solver on the Helmholtz PDE. "/>
+        <h2 class="subtitle has-text-centered">
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="images/enma/advection_vis_enma_gt_err_1.png" alt="Qualitative results of reconstruction using neural solver on the Helmholtz PDE. "/>
+        <h2 class="subtitle has-text-centered">
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="images/enma/gs_vis_enma_gt_err_1.png" alt="Qualitative results of reconstruction using neural solver on the Poisson PDE. "/>
+        <h2 class="subtitle has-text-centered">
+        </h2>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="images/enma/gs_vis_enma_gt_err_2.png" alt="Qualitative results of reconstruction using neural solver on the Poisson PDE. "/>
+      <h2 class="subtitle has-text-centered">
+    </h2>
+    </div>
+    <div class="item">
+        <!-- Your image here -->
+        <img src="images/enma/wave_vis_enma_gt_err_1.png" alt="Qualitative results of reconstruction using neural solver on the non linear reaction diffusionwith varying initial conditions PDE. "/>
+        <h2 class="subtitle has-text-centered">
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="images/enma/wave_vis_enma_gt_err_2.png" alt="Qualitative results of reconstruction using neural solver on the non linear reaction diffusionwith varying initial conditions PDE. "/>
+        <h2 class="subtitle has-text-centered">
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="images/enma/vorticity_vis_enma_gt_err_1.png" alt="Qualitative results of reconstruction using neural solver on the non linear reaction diffusion PDE. "/>
+        <h2 class="subtitle has-text-centered">
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="images/enma/vorticity_vis_enma_gt_err_2.png" alt="Qualitative results of reconstruction using neural solver on the non linear reaction diffusion PDE. "/>
+        <h2 class="subtitle has-text-centered">
+        </h2>
+      </div>
+  </div>
+  </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">NeurIPS 2025 Poster</h2>
+        <iframe  src="images/enma/poster-grand-V2.pdf" width="100%" height="550" alt="Poster for ICLR 2025 presentation">
+      </iframe>
+      </div>
+    </div>
+  </section> -->
+<!-- End paper poster -->
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX
+      </h2>
+      <pre><code>
+        @misc{koupaï2025enmatokenwiseautoregressiongenerative,
+          title={ENMA: Tokenwise Autoregression for Generative Neural PDE Operators}, 
+          author={Armand Kassaï Koupaï and Lise Le Boudec and Louis Serrano and Patrick Gallinari},
+          year={2025},
+          eprint={2506.06158},
+          archivePrefix={arXiv},
+          primaryClass={cs.LG},
+          url={https://arxiv.org/abs/2506.06158}, 
+        }
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/vinthony/project-page-template">modification version</a> of <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> from <a href="https://github.com/vinthony">vinthony</a>.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
