@@ -23,7 +23,8 @@ body {
 /* ✅ Change background color when hovering over the link or icon */
 .link-block a:hover .icon-wrapper,
 .icon-wrapper:hover {
-  background-color: rgb(243, 189, 11); /* yellow on hover */
+  /* background-color: rgb(243, 189, 11); yellow on hover */
+  background-color: rgb(70, 162, 242);
 }
 
 .link-block .icon img,
@@ -137,7 +138,8 @@ body {
   margin-top: 20px; /* space above institutions */
   font-size: 24px;
   font-weight: bold;
-  color: rgb(243, 189, 11);
+  /* color: rgb(243, 189, 11); */
+  color: rgb(4, 24, 142); 
   /* color: rgb(224, 171, 228); */
 }
 
@@ -284,25 +286,26 @@ a:after{
 }
 
 .publication-authors a {
-  color: rgb(253, 238, 191) !important; /* your preferred color */
+  color: rgb(4, 24, 142) !important; /* your preferred color */
   text-decoration: none ;  /* optional: removes underline */
 }
 .publication-authors a:hover {
-  color: rgb(243, 189, 11) !important
+  color: rgb(70, 162, 242) !important
 }
 .publication-links a {
-  color: rgb(255, 255, 255) !important; /* your preferred color */
+  color: rgb(134, 41, 53) !important; /* your preferred color */
   text-decoration: none ;  /* optional: removes underline */
 }
 .publication-links a:hover {
-  color: rgb(243, 189, 11) !important
+  color: rgb(70, 162, 242) !important
 }
 .publication-conf a {
-  color: rgb(255, 255, 255) !important; /* your preferred color */
+  /* color: rgb(255, 255, 255) !important; your preferred color */
+  color: rgb(134, 41, 53);
   text-decoration: none ;  /* optional: removes underline */
 }
 .publication-conf a:hover {
-  color: rgb(243, 189, 11) !important
+  color: rgb(70, 162, 242) !important
 }
 a:hover{
   color: black;
@@ -431,8 +434,13 @@ a:hover:after{
 
 
 .bg-overlay {
-    background-color: rgb(22, 16, 78);
+    /* background-color: rgb(22, 16, 78); */
     /* background-color: rgb(71, 23, 13); */
+    background-image: url('../../images/fondtitre.jpg'); /* <-- replace with your image path */
+    background-size: cover;        /* ensures the image fills the area */
+    background-position: center;   /* centers the image */
+    background-repeat: no-repeat;  /* prevents tiling */
+    opacity: 0.9;                  /* optional: makes it slightly transparent */
     position: absolute;
     width: 100%;
     height: 100%;
@@ -444,12 +452,14 @@ a:hover:after{
 
 .header{
   position: relative;
-  color: white;
-  text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+  /* color: white; */
+  color: rgb(4, 24, 142);
+  /* text-shadow: 1px 1px 8px rgba(0,0,0,0.6); */
 }
 
 .header a{
-  color:white;
+  color: rgb(134, 41, 53); 
+  /* rgb(109, 7, 26); */
 }
 
 
